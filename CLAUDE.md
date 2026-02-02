@@ -6,7 +6,10 @@ Python 기반의 실시간 시스템 리소스 모니터링 도구입니다. 데
 
 ## skills
 - **Git commit** : 사용자가 git commit 을 요청했을 때, 'skills/git_commit/skill.md' 를 참고하여 git commit 을 진행한다
- 
+
+## Agents
+- **js-code-reviewer** : 사용자가 JS 코드를 리뷰해달라고 요청했을 때, 해당 에이전트를 사용합니다.
+
 ## 핵심 요구사항
 
 - **실시간 모니터링**: 1초 간격으로 시스템 리소스 갱신
