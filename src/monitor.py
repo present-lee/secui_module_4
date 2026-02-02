@@ -14,7 +14,7 @@ def clear_screen():
 def create_progress_bar(percent, length=10):
     """진행바를 생성합니다."""
     filled = int(length * percent / 100)
-    bar = '█' * filled + '░' * (length - filled)
+    bar = '#' * filled + '-' * (length - filled)
     return f"[{bar}]"
 
 
@@ -26,7 +26,7 @@ def display_info(cpu, memory, disk, network):
     print(f"CPU: {cpu['percent']:.1f}% {create_progress_bar(cpu['percent'])}")
     print(f"메모리: {memory['used_gb']}GB / {memory['total_gb']}GB ({memory['percent']:.1f}%)")
     print(f"디스크: {disk['used_gb']}GB / {disk['total_gb']}GB ({disk['percent']:.1f}%)")
-    print(f"네트워크: ↑{network['sent_gb']}GB ↓{network['recv_gb']}GB")
+    print(f"네트워크: UP {network['sent_gb']}GB / DN {network['recv_gb']}GB")
     print("=" * 40)
     print("Ctrl+C 로 종료".center(40))
     print("=" * 40)
